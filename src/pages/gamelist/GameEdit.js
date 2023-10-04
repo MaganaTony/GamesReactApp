@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import * as gameActions from "../../store/actions/gameActions";
 
 import { Link, useNavigate, useParams } from "react-router-dom";
+import StarRate from "../../components/starRating/starRate";
 
 export default function GameEdit() {
     const dispatch = useDispatch();
@@ -59,7 +60,7 @@ export default function GameEdit() {
                             <textarea ref={gameDescriptionInput} className="form-control" id="gameDescription" defaultValue={activeGame.description}/>
                         </div>
                         <div className="form-group">
-                            <input ref={gameRatingInput} type="text" className="form-check-input" id="gameRating" defaultChecked={activeGame.done}/>
+                            <StarRate id="gameRating"/>
                             <label htmlFor="gameRating">Rating</label>
                         </div>
                         <div className="form-group">

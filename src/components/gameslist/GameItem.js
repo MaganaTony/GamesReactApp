@@ -1,4 +1,5 @@
 import React from "react";
+import StarRate from "../starRating/starRate";
 
 export default function GameItem(props) {
     const { id, name, description, image, rating } = props.data;
@@ -11,7 +12,8 @@ export default function GameItem(props) {
             </div>
             <div className="col-9">
                 <h2>{name}</h2>
-                <h4>Rating:{rating}</h4>
+                <h4>Rating: {rating}</h4>
+                
                 <p>{description}</p>
             </div>
             <div className="col-1 d-flex flex-column justify-content-between">
