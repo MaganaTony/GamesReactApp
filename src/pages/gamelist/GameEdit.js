@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import * as gameActions from "../../store/actions/gameActions";
 
 import { Link, useNavigate, useParams } from "react-router-dom";
-import StarRate from "../../components/starRating/starRate";
+import StarRate from "../../components/starComp/starRate";
 
 export default function GameEdit() {
     const dispatch = useDispatch();
@@ -17,15 +17,13 @@ export default function GameEdit() {
     const gameNameInput = useRef(null);
     const gameDescriptionInput = useRef(null);
     const gameImageInput = useRef(null);
-    const gameRatingInput = useRef(null);
 
     function finishEdit(){
         const editedGame = {
             id: Number(id),
             name: gameNameInput.current.value,
             description: gameDescriptionInput.current.value,
-            image: gameImageInput.current.value,
-            rating: Number(gameRatingInput.current.value)
+            image: gameImageInput.current.value
         };
 
         dispatch({
@@ -60,7 +58,7 @@ export default function GameEdit() {
                             <textarea ref={gameDescriptionInput} className="form-control" id="gameDescription" defaultValue={activeGame.description}/>
                         </div>
                         <div className="form-group">
-                            <StarRate id="gameRating"/>
+                            <StarRate rating={activeGame.rating} id={activeGame.id} />
                             <label htmlFor="gameRating">Rating</label>
                         </div>
                         <div className="form-group">

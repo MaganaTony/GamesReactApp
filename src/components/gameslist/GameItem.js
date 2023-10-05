@@ -1,5 +1,6 @@
 import React from "react";
-import StarRate from "../starRating/starRate";
+import StarRate from "../starComp/starRate";
+import StarPreview from "../starComp/StarPreview";
 
 export default function GameItem(props) {
     const { id, name, description, image, rating } = props.data;
@@ -12,7 +13,7 @@ export default function GameItem(props) {
             </div>
             <div className="col-9">
                 <h2>{name}</h2>
-                <h4>Rating: {rating}</h4>
+                <h4>Rating: <StarPreview id/></h4>
                 
                 <p>{description}</p>
             </div>

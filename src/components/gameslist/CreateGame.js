@@ -16,7 +16,7 @@ export default function CreateGame() {
             name: gameName,
             description: "This is a game with no description yet", 
             image: "no image",
-            rating: 0
+            rating: "no rating"
         };
 
         dispatch({
