@@ -4,6 +4,8 @@ import { useDispatch, useSelector } from "react-redux";
 import * as gameActions from "../../store/actions/gameActions";
 import CreateGame from "./CreateGame";
 import GameItem from "./GameItem";
+import GameCarousel from "./GameCarousel";
+
 
 
 export default function GameBrowser() {
@@ -21,14 +23,16 @@ export default function GameBrowser() {
     }   
 
     return(
-        <div className="GameBrowser container card bg-dark">
-            <div className="text-center pt-3">
+        <div className="GameBrowser d-flex">
+            {/* <div className="text-center pt-3">
                 <h1 className="text-light">Game Browser App</h1>
                 <CreateGame/>
-            </div>
+            </div> */}
             {
                 games.map((game, index) => {
-                    return <GameItem key={game.id} data={game} remove={removeGame} update={updateGame} />
+                    return (
+                    <GameItem key={game.id} data={game} remove={removeGame} update={updateGame} />
+                    )
                 })
             }
         </div>

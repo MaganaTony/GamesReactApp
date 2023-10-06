@@ -7,7 +7,7 @@ export default function MainLayout() {
     return(
         <div className="MainLayout">
             <Navbar />
-            <div className="d-flex flex-column min-vh-100 py-4 bg-dark">
+            <div className="min-vh-100 py-4" style={{margin: "0 20%"}}>
                 <Outlet />
             </div>
             <Footer />    

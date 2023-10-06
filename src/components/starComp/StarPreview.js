@@ -7,7 +7,7 @@ function StarPreview(props) {
     const dispatch = useDispatch();
     const [activeGame, setActiveGame] = useState({});
     const games = useSelector((state) => state.gameReducer.games);
-
+    console.log(props.id);
     useEffect(() => {
         const newGame = games.find((game) => {
             return game.id === Number(props.id);
