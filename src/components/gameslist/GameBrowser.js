@@ -23,11 +23,12 @@ export default function GameBrowser() {
     }   
 
     return(
-        <div className="GameBrowser d-flex">
-            {/* <div className="text-center pt-3">
+        <div className="GameBrowser">
+            <div className="text-center pt-3">
                 <h1 className="text-light">Game Browser App</h1>
                 <CreateGame/>
-            </div> */}
+            </div> 
+            <div className="Game Item DIV d-flex">
             {
                 games.map((game, index) => {
                     return (
@@ -35,6 +36,7 @@ export default function GameBrowser() {
                     )
                 })
             }
+            </div>
         </div>
     );
 }

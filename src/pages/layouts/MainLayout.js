@@ -5,7 +5,7 @@ import Footer from "../../components/footer/Footer";
 
 export default function MainLayout() {
     return(
-        <div className="MainLayout">
+        <div className="MainLayout bg-dark">
             <Navbar />
             <div className="min-vh-100 py-4" style={{margin: "0 20%"}}>
                 <Outlet />
